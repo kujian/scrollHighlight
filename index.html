@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery滚动高亮节点插件-不适用链接</title>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/scrollHighlight.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$(".sidebar").scrollHighlight({childItem:"li",attribute:"data-href",buffer:30});
+	})
+	</script>
+	<style type="text/css">
+		*{margin:0; padding:0; list-style: none;}
+		a{text-decoration: none;}
+		img{max-width: 100%; height: auto;}
+		.main{overflow: auto;}
+		.main li{color:#fff; font-size:20px; padding:0px 20px 400px;}
+		.main li:nth-child(4n+1){background: #5DB2FF;}
+		.main li:nth-child(4n+2){background: #FB6E52;}
+		.main li:nth-child(4n+3){background: #E75B8D;}
+		.main li:nth-child(4n+4){background: #A0D468;}
+		.main li:last-child{margin-bottom:600px;}
+		.sidebar{position:fixed; right:0; top:40%; margin:-100px 0 0 0; padding:10px; background: #fff; width:100px;}
+		.sidebar li{}
+		.sidebar a{font-size:14px; color:#333; line-height: 30px;}
+		.sidebar a:hover{color:blue;}
+		.sidebar .highlight{font-weight: bold; color:blue;}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<ul>
+			<li id="page1">
+				<h3>这是左边滚动到这里右边高亮的节点1</h3>
+			</li>
+			<li id="page2">
+				<h3>这是左边滚动到这里右边高亮的节点2</h3>
+				
+			</li>
+			<li id="page3">
+				<h3>这是左边滚动到这里右边高亮的节点3</h3>
+				<img src="git.png"/>
+			</li>
+			<li id="page4">
+				<h3>这是左边滚动到这里右边高亮的节点4</h3>
+			</li>
+			<li id="page5">
+				<h3>这是左边滚动到这里右边高亮的节点5</h3>
+			</li>
+			<li id="page6">
+				<h3>这是左边滚动到这里右边高亮的节点6</h3>
+			</li>
+			<li id="page7">
+				<h3>这是左边滚动到这里右边高亮的节点7</h3>
+			</li>
+			<li id="page8">
+				<h3>这是左边滚动到这里右边高亮的节点8</h3>
+			</li>
+			<li id="page9">
+				<h3>这是左边滚动到这里右边高亮的节点9</h3>
+			</li>
+			<li id="page10">
+				<h3>这是左边滚动到这里右边高亮的节点10</h3>
+			</li>
+		</ul>
+	</div>
+	<div class="sidebar">
+		<ul>
+			<li data-href="#page1">这是节点1</li>
+			<li data-href="#page2">这是节点2</li>
+			<li data-href="#page3">这是节点3</li>
+			<li data-href="#page4">这是节点4</li>
+			<li data-href="#page5">这是节点5</li>
+			<li data-href="#page6">这是节点6</li>
+			<li data-href="#page7">这是节点7</li>
+			<li data-href="#page8">这是节点8</li>
+			<li data-href="#page9">这是节点9</li>
+			<li data-href="#page10">这是节点10</li>
+		</ul>
+	</div>
+</body>
+</html>
