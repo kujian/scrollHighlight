@@ -11,20 +11,19 @@
 	<script type="text/javascript" src="js/scrollHighlight.js"></script>
 	<script type="text/javascript">
 	$(function(){
-		$(".sidebar").scrollHighlight({buffer:10});
+		$(".sidebar").scrollHighlight({mode:"horizontal", container:".main"});
 	})
 	</script>
 	<style type="text/css">
 		*{margin:0; padding:0; list-style: none;}
 		a{text-decoration: none;}
-		img{max-width: 100%; height: auto;}
-		.main{overflow: auto;}
-		.main li{color:#fff; font-size:20px; padding:0px 20px 400px;}
+		.main{overflow: auto; width:1000px;}
+		.main ul{width:4000px;}
+		.main li{color:#fff; font-size:20px; width:500px; float: left; height: 100%;}
 		.main li:nth-child(4n+1){background: #5DB2FF;}
 		.main li:nth-child(4n+2){background: #FB6E52;}
 		.main li:nth-child(4n+3){background: #E75B8D;}
 		.main li:nth-child(4n+4){background: #A0D468;}
-		.main li:last-child{margin-bottom:600px;}
 		.sidebar{position:fixed; right:0; top:40%; margin:-100px 0 0 0; padding:10px; background: #fff; width:100px;}
 		.sidebar li{}
 		.sidebar a{font-size:14px; color:#333; line-height: 30px;}
@@ -44,7 +43,6 @@
 			</li>
 			<li id="page3">
 				<h3>这是左边滚动到这里右边高亮的节点3</h3>
-				<img src="git.png"/>
 			</li>
 			<li id="page4">
 				<h3>这是左边滚动到这里右边高亮的节点4</h3>
@@ -61,12 +59,6 @@
 			<li id="page8">
 				<h3>这是左边滚动到这里右边高亮的节点8</h3>
 			</li>
-			<li id="page9">
-				<h3>这是左边滚动到这里右边高亮的节点9</h3>
-			</li>
-			<li id="page10">
-				<h3>这是左边滚动到这里右边高亮的节点10</h3>
-			</li>
 		</ul>
 	</div>
 	<div class="sidebar">
@@ -79,9 +71,8 @@
 			<li><a href="#page6">这是节点6</a></li>
 			<li><a href="#page7">这是节点7</a></li>
 			<li><a href="#page8">这是节点8</a></li>
-			<li><a href="#page9">这是节点9</a></li>
 		</ul>
 	</div>
-<script type="text/javascript" src="http://tajs.qq.com/stats?sId=15910806" charset="UTF-8"></script>
+	<script type="text/javascript" src="http://tajs.qq.com/stats?sId=15910806" charset="UTF-8"></script>
 </body>
 </html>

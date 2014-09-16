@@ -73,6 +73,7 @@
 					if (opts.cancelFlag && (xy > pos[i] + myOuter(wrap[i]))) { //当滚动高度(宽度)超过它的位置加上它的高度(宽度)时，取消节点的高亮
 						item.eq(index[i]).removeClass(highlight);
 					}
+
 					// if (mode == 'vertical') {
 					// 	pos.push($(wrap[i]).offset().top); //存储每个节点的偏移值
 					// 	myPos(i); //当默认是垂直滚动时，获取上面节点的位置，并和滚动高度对比，当滚动高度大于它的时候，高亮。
@@ -96,8 +97,8 @@
 					var that = $(anchor[index]),
 					$con = opts.container == window ? $("html,body") : $(opts.container);
 					if (that.length && that.is(":visible")) {
-						// console.log("offsetTop"+ that.offset().top);
-						// console.log("scrollTop"+$con.scrollTop());
+						console.log("offsetTop"+ that.offset().top);
+						console.log("scrollTop"+$con.scrollTop());
 						if (mode == 'vertical') {
 							$con.animate({
 								scrollTop: that.offset().top - buffer + $con.scrollTop()

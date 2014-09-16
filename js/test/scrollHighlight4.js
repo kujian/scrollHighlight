@@ -78,10 +78,11 @@
 			}
 			
 			//当有滚动时执行下面代码
-		    $container.on("scroll",function() {
-		        clearTimeout(resizeTimer);
-		        resizeTimer = setTimeout(onScroll, 100);
-		    });
+		    // $container.on("scroll",function() {
+		    //     clearTimeout(resizeTimer);
+		    //     resizeTimer = setTimeout(onScroll, 100);
+		    // });
+			$container.on("scroll",onScroll);
 		    //当发现调整屏幕大小时，重新执行代码
 		    $(window).on("resize",function() {
 		        clearTimeout(resizeTimer);
