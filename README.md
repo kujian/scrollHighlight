@@ -1,7 +1,7 @@
 # scrollHighlight
 jQuery滚动高亮插件
 - author blog：http://caibaojian.com
-- plugin url:  http://caiboajian.com/scrollhighlight
+- plugin url:  http://caibaojian.com/scrollhighlight
 - demo url  :  http://caibaojian.com/demo/scrollhighlight
 
 
